@@ -1,0 +1,47 @@
+name: Daily LLM Hardware Advisor
+
+on:
+  schedule:
+    # 01:00 UTC == 09:00 Asia/Shanghai. GitHub cron is always UTC.
+    - cron: '0 1 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-llm-hardware-advisor
+  cancel-in-progress: false
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Hardware Advisor Agent
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        run: python agent.py
+
+      - name: Commit generated report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add daily_hardware_report.md
+          git diff --staged --quiet && echo "No changes to commit" && exit 0
+          git commit -m "docs: update daily LLM hardware advisor report [skip ci]"
+          git push
