@@ -1,6 +1,8 @@
 name: Daily LLM Hardware Advisor
 
 on:
+  push:
+    branches: [main]
   schedule:
     # 01:00 UTC == 09:00 Asia/Shanghai. GitHub cron is always UTC.
     - cron: '0 1 * * *'

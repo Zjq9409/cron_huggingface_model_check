@@ -1,10 +1,55 @@
-# Daily LLM Hardware Advisor Report (2026-08-28)
+# Daily LLM Hardware Advisor Report (2026-08-31)
 
 *Automated collection of recently published/updated models, structural analysis, and resource recommendations.*
 
+## [zai-org/GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)
+- **Creator/Org:** `zai-org` | **Task:** `text-generation`
+- **Downloads (Last 30 Days):** `50,116` | **Likes:** `1,341`
+- **Last Updated:** `2026-08-29 09:51:13`
+- **Parameters:** `753.33 B` | **Published Dtypes:** `F8_E4M3 99.7%, BF16 0.3%, F32 0.0%`
+- **Architecture:** `MoE (top-8 of 256 experts)` | **Activated Params:** `~41.05 B`
+
+#### VRAM Requirements & Recommended Hardware:
+| Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
+| :--- | :--- | :--- | :--- | :--- |
+| **FP16** | 1506.66 GB | **1807.99 GB** | 8x Intel CRI (256GB) | 7x B300 (288GB) |
+| **INT8** | 753.33 GB | **904.0 GB** | 4x Intel CRI (256GB) | 4x B300 (288GB) |
+| **INT4** | 376.66 GB | **452.0 GB** | 2x Intel CRI (256GB) | 2x B300 (288GB) |
+
+---
+## [zai-org/GLM-5.3-BF16](https://huggingface.co/zai-org/GLM-5.3-BF16)
+- **Creator/Org:** `zai-org` | **Task:** `text-generation`
+- **Downloads (Last 30 Days):** `1,787` | **Likes:** `27`
+- **Last Updated:** `2026-08-28 13:46:13`
+- **Parameters:** `753.33 B` | **Published Dtypes:** `BF16 100.0%, F32 0.0%`
+- **Architecture:** `MoE (top-8 of 256 experts)` | **Activated Params:** `~41.05 B`
+
+#### VRAM Requirements & Recommended Hardware:
+| Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
+| :--- | :--- | :--- | :--- | :--- |
+| **FP16** | 1506.66 GB | **1807.99 GB** | 8x Intel CRI (256GB) | 7x B300 (288GB) |
+| **INT8** | 753.33 GB | **904.0 GB** | 4x Intel CRI (256GB) | 4x B300 (288GB) |
+| **INT4** | 376.66 GB | **452.0 GB** | 2x Intel CRI (256GB) | 2x B300 (288GB) |
+
+---
+## [zai-org/GLM-5.3-Flash-BF16](https://huggingface.co/zai-org/GLM-5.3-Flash-BF16)
+- **Creator/Org:** `zai-org` | **Task:** `text-generation`
+- **Downloads (Last 30 Days):** `8,314` | **Likes:** `50`
+- **Last Updated:** `2026-08-27 10:34:18`
+- **Parameters:** `321.32 B` | **Published Dtypes:** `BF16 100.0%, F32 0.0%`
+- **Architecture:** `MoE (top-8 of 288 experts)` | **Activated Params:** `~16.57 B`
+
+#### VRAM Requirements & Recommended Hardware:
+| Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
+| :--- | :--- | :--- | :--- | :--- |
+| **FP16** | 642.65 GB | **771.18 GB** | 4x Intel CRI (256GB) | 3x B300 (288GB) |
+| **INT8** | 321.32 GB | **385.59 GB** | 2x Intel CRI (256GB) | 2x B300 (288GB) |
+| **INT4** | 160.66 GB | **192.79 GB** | 1x Intel CRI (256GB) | 1x B300 (288GB) |
+
+---
 ## [zai-org/GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash)
 - **Creator/Org:** `zai-org` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `34` | **Likes:** `1,404`
+- **Downloads (Last 30 Days):** `346,516` | **Likes:** `1,715`
 - **Last Updated:** `2026-08-27 10:33:43`
 - **Parameters:** `321.32 B` | **Published Dtypes:** `F8_E4M3 97.8%, BF16 2.2%, F32 0.0%`
 - **Architecture:** `MoE (top-8 of 288 experts)` | **Activated Params:** `~16.57 B`
@@ -19,7 +64,7 @@
 ---
 ## [Qwen/Qwen3.8-Flash-Next-FP8](https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8)
 - **Creator/Org:** `Qwen` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `2,219` | **Likes:** `136`
+- **Downloads (Last 30 Days):** `76,935` | **Likes:** `159`
 - **Last Updated:** `2026-08-27 05:04:18`
 - **Parameters:** `180.00 B` | **Published Dtypes:** `F8_E4M3 97.0%, BF16 3.0%, I64 0.0%`
 - **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `~5.57 B`
@@ -34,7 +79,7 @@
 ---
 ## [Qwen/Qwen3.8-Flash-Next](https://huggingface.co/Qwen/Qwen3.8-Flash-Next)
 - **Creator/Org:** `Qwen` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `4,810` | **Likes:** `4,038`
+- **Downloads (Last 30 Days):** `121,976` | **Likes:** `4,389`
 - **Last Updated:** `2026-08-27 05:03:36`
 - **Parameters:** `180.00 B` | **Published Dtypes:** `BF16 100.0%, I64 0.0%`
 - **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `~5.57 B`
@@ -49,7 +94,7 @@
 ---
 ## [google/gemma-4-12B-it-assistant](https://huggingface.co/google/gemma-4-12B-it-assistant)
 - **Creator/Org:** `google` | **Task:** `any-to-any`
-- **Downloads (Last 30 Days):** `35,756` | **Likes:** `120`
+- **Downloads (Last 30 Days):** `34,596` | **Likes:** `120`
 - **Last Updated:** `2026-08-20 21:49:20`
 - **Parameters:** `0.42 B` | **Published Dtypes:** `BF16 100.0%`
 - **Architecture:** `MoE`
@@ -64,7 +109,7 @@
 ---
 ## [moonshotai/Kimi-K3](https://huggingface.co/moonshotai/Kimi-K3)
 - **Creator/Org:** `moonshotai` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `2,675,145` | **Likes:** `11,047`
+- **Downloads (Last 30 Days):** `2,794,721` | **Likes:** `11,100`
 - **Last Updated:** `2026-08-20 04:57:37`
 - **Parameters:** `2,779.93 B` | **Published Dtypes:** `U8 97.9%, BF16 2.1%, F32 0.0%`
 - **Architecture:** `MoE (top-16 of 896 experts)` | **Activated Params:** `~126.46 B`
@@ -79,7 +124,7 @@
 ---
 ## [Qwen/Qwen3.8-27B](https://huggingface.co/Qwen/Qwen3.8-27B)
 - **Creator/Org:** `Qwen` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `3,457,687` | **Likes:** `13,075`
+- **Downloads (Last 30 Days):** `4,511,348` | **Likes:** `13,350`
 - **Last Updated:** `2026-08-14 15:00:01`
 - **Parameters:** `27.78 B` | **Published Dtypes:** `BF16 100.0%`
 - **Architecture:** `Dense`
@@ -94,7 +139,7 @@
 ---
 ## [Qwen/Qwen3.8-27B-FP8](https://huggingface.co/Qwen/Qwen3.8-27B-FP8)
 - **Creator/Org:** `Qwen` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `3,974,725` | **Likes:** `715`
+- **Downloads (Last 30 Days):** `5,129,402` | **Likes:** `728`
 - **Last Updated:** `2026-08-14 14:44:41`
 - **Parameters:** `27.78 B` | **Published Dtypes:** `F8_E4M3 88.9%, BF16 11.1%`
 - **Architecture:** `Dense`
@@ -109,7 +154,7 @@
 ---
 ## [deepseek-ai/DeepSeek-V4-Pro-0813](https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813)
 - **Creator/Org:** `deepseek-ai` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `90,822` | **Likes:** `770`
+- **Downloads (Last 30 Days):** `127,009` | **Likes:** `786`
 - **Last Updated:** `2026-08-13 16:28:28`
 - **Parameters:** `1,650.50 B` | **Published Dtypes:** `I8 98.4%, F8_E4M3 1.5%, BF16 0.2%, F32 0.0%, I64 0.0%`
 - **Architecture:** `MoE (top-6 of 384 experts)` | **Activated Params:** `~31.70 B`
@@ -124,7 +169,7 @@
 ---
 ## [MiniMaxAI/MiniMax-H3](https://huggingface.co/MiniMaxAI/MiniMax-H3)
 - **Creator/Org:** `MiniMaxAI` | **Task:** `image-text-to-video`
-- **Downloads (Last 30 Days):** `4,848,404` | **Likes:** `4,549`
+- **Downloads (Last 30 Days):** `5,263,381` | **Likes:** `4,660`
 - **Last Updated:** `2026-08-13 01:46:29`
 - **Parameters:** `33.12 B` | **Published Dtypes:** `BF16 99.9%, F32 0.1%`
 - **Architecture:** `Unknown`
@@ -139,7 +184,7 @@
 ---
 ## [microsoft/Fara-7B](https://huggingface.co/microsoft/Fara-7B)
 - **Creator/Org:** `microsoft` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `1,593` | **Likes:** `620`
+- **Downloads (Last 30 Days):** `1,660` | **Likes:** `620`
 - **Last Updated:** `2026-08-12 14:22:05`
 - **Parameters:** `8.29 B` | **Published Dtypes:** `BF16 100.0%`
 - **Architecture:** `Dense`
@@ -154,7 +199,7 @@
 ---
 ## [Qwen/Qwen3.8-2.4T-A95B](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B)
 - **Creator/Org:** `Qwen` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `21,924` | **Likes:** `1,177`
+- **Downloads (Last 30 Days):** `35,309` | **Likes:** `1,183`
 - **Last Updated:** `2026-08-12 10:24:04`
 - **Parameters:** `2,446.18 B` | **Published Dtypes:** `BF16 100.0%`
 - **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `95.00 B`
@@ -169,7 +214,7 @@
 ---
 ## [Qwen/Qwen3.8-2.4T-A95B-FP8](https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B-FP8)
 - **Creator/Org:** `Qwen` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `21,988` | **Likes:** `232`
+- **Downloads (Last 30 Days):** `22,999` | **Likes:** `233`
 - **Last Updated:** `2026-08-12 10:23:42`
 - **Parameters:** `2,446.18 B` | **Published Dtypes:** `F8_E4M3 98.0%, BF16 2.0%`
 - **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `95.00 B`
@@ -184,7 +229,7 @@
 ---
 ## [zai-org/GLM-5](https://huggingface.co/zai-org/GLM-5)
 - **Creator/Org:** `zai-org` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `61,868` | **Likes:** `2,120`
+- **Downloads (Last 30 Days):** `67,395` | **Likes:** `2,119`
 - **Last Updated:** `2026-08-11 07:36:34`
 - **Parameters:** `753.86 B` | **Published Dtypes:** `BF16 100.0%, F32 0.0%`
 - **Architecture:** `MoE (top-8 of 256 experts)` | **Activated Params:** `~41.05 B`
@@ -199,7 +244,7 @@
 ---
 ## [microsoft/Mage-VL](https://huggingface.co/microsoft/Mage-VL)
 - **Creator/Org:** `microsoft` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `497,281` | **Likes:** `384`
+- **Downloads (Last 30 Days):** `417,201` | **Likes:** `389`
 - **Last Updated:** `2026-08-10 09:23:16`
 - **Parameters:** `4.74 B` | **Published Dtypes:** `BF16 100.0%`
 - **Architecture:** `Dense`
@@ -214,7 +259,7 @@
 ---
 ## [deepseek-ai/DeepSeek-V4-Flash-0731](https://huggingface.co/deepseek-ai/DeepSeek-V4-Flash-0731)
 - **Creator/Org:** `deepseek-ai` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `3,959,575` | **Likes:** `3,776`
+- **Downloads (Last 30 Days):** `4,575,518` | **Likes:** `3,824`
 - **Last Updated:** `2026-08-01 03:07:41`
 - **Parameters:** `304.18 B` | **Published Dtypes:** `I8 97.4%, F8_E4M3 2.1%, BF16 0.5%, F32 0.0%, I64 0.0%`
 - **Architecture:** `MoE (top-6 of 256 experts)` | **Activated Params:** `~9.05 B`
