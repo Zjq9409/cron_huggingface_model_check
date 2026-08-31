@@ -4,10 +4,10 @@
 
 ## [zai-org/GLM-5.3](https://huggingface.co/zai-org/GLM-5.3)
 - **Creator/Org:** `zai-org` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `50,116` | **Likes:** `1,350`
+- **Downloads (Last 30 Days):** `50,116` | **Likes:** `1,351`
 - **Last Updated:** `2026-08-29 09:51:13`
 - **Parameters:** `753.33 B` | **Published Dtypes:** `F8_E4M3 99.7%, BF16 0.3%, F32 0.0%`
-- **Architecture:** `MoE (top-8 of 256 experts)` | **Activated Params:** `~41.05 B`
+- **Architecture:** `MoE (top-8 of 256 experts)` | **Model Class:** `GlmMoeDsaForCausalLM` | **Activated Params:** `~41.05 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -22,7 +22,7 @@
 - **Downloads (Last 30 Days):** `1,787` | **Likes:** `28`
 - **Last Updated:** `2026-08-28 13:46:13`
 - **Parameters:** `753.33 B` | **Published Dtypes:** `BF16 100.0%, F32 0.0%`
-- **Architecture:** `MoE (top-8 of 256 experts)` | **Activated Params:** `~41.05 B`
+- **Architecture:** `MoE (top-8 of 256 experts)` | **Model Class:** `GlmMoeDsaForCausalLM` | **Activated Params:** `~41.05 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -37,7 +37,7 @@
 - **Downloads (Last 30 Days):** `8,314` | **Likes:** `50`
 - **Last Updated:** `2026-08-27 10:34:18`
 - **Parameters:** `321.32 B` | **Published Dtypes:** `BF16 100.0%, F32 0.0%`
-- **Architecture:** `MoE (top-8 of 288 experts)` | **Activated Params:** `~16.57 B`
+- **Architecture:** `MoE (top-8 of 288 experts)` | **Model Class:** `Glm5NextForConditionalGeneration` | **Activated Params:** `~16.57 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -49,10 +49,10 @@
 ---
 ## [zai-org/GLM-5.3-Flash](https://huggingface.co/zai-org/GLM-5.3-Flash)
 - **Creator/Org:** `zai-org` | **Task:** `text-generation`
-- **Downloads (Last 30 Days):** `346,516` | **Likes:** `1,724`
+- **Downloads (Last 30 Days):** `346,516` | **Likes:** `1,725`
 - **Last Updated:** `2026-08-27 10:33:43`
 - **Parameters:** `321.32 B` | **Published Dtypes:** `F8_E4M3 97.8%, BF16 2.2%, F32 0.0%`
-- **Architecture:** `MoE (top-8 of 288 experts)` | **Activated Params:** `~16.57 B`
+- **Architecture:** `MoE (top-8 of 288 experts)` | **Model Class:** `Glm5NextForConditionalGeneration` | **Activated Params:** `~16.57 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -64,10 +64,10 @@
 ---
 ## [Qwen/Qwen3.8-Flash-Next-FP8](https://huggingface.co/Qwen/Qwen3.8-Flash-Next-FP8)
 - **Creator/Org:** `Qwen` | **Task:** `image-text-to-text`
-- **Downloads (Last 30 Days):** `76,935` | **Likes:** `161`
+- **Downloads (Last 30 Days):** `76,935` | **Likes:** `162`
 - **Last Updated:** `2026-08-27 05:04:18`
 - **Parameters:** `180.00 B` | **Published Dtypes:** `F8_E4M3 97.0%, BF16 3.0%, I64 0.0%`
-- **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `~5.57 B`
+- **Architecture:** `MoE (top-10 of 512 experts)` | **Model Class:** `Qwen4ExpForConditionalGeneration` | **Activated Params:** `~5.57 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -82,7 +82,7 @@
 - **Downloads (Last 30 Days):** `121,976` | **Likes:** `4,396`
 - **Last Updated:** `2026-08-27 05:03:36`
 - **Parameters:** `180.00 B` | **Published Dtypes:** `BF16 100.0%, I64 0.0%`
-- **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `~5.57 B`
+- **Architecture:** `MoE (top-10 of 512 experts)` | **Model Class:** `Qwen4ExpForConditionalGeneration` | **Activated Params:** `~5.57 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -97,7 +97,7 @@
 - **Downloads (Last 30 Days):** `34,596` | **Likes:** `120`
 - **Last Updated:** `2026-08-20 21:49:20`
 - **Parameters:** `0.42 B` | **Published Dtypes:** `BF16 100.0%`
-- **Architecture:** `MoE`
+- **Architecture:** `MoE` | **Model Class:** `Gemma4UnifiedAssistantForCausalLM`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -112,7 +112,7 @@
 - **Downloads (Last 30 Days):** `2,794,721` | **Likes:** `11,102`
 - **Last Updated:** `2026-08-20 04:57:37`
 - **Parameters:** `2,779.93 B` | **Published Dtypes:** `U8 97.9%, BF16 2.1%, F32 0.0%`
-- **Architecture:** `MoE (top-16 of 896 experts)` | **Activated Params:** `~126.46 B`
+- **Architecture:** `MoE (top-16 of 896 experts)` | **Model Class:** `KimiK3ForConditionalGeneration` | **Activated Params:** `~126.46 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -127,7 +127,7 @@
 - **Downloads (Last 30 Days):** `4,511,348` | **Likes:** `13,356`
 - **Last Updated:** `2026-08-14 15:00:01`
 - **Parameters:** `27.78 B` | **Published Dtypes:** `BF16 100.0%`
-- **Architecture:** `Dense`
+- **Architecture:** `Dense` | **Model Class:** `Qwen3_5ForConditionalGeneration`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -142,7 +142,7 @@
 - **Downloads (Last 30 Days):** `5,129,402` | **Likes:** `729`
 - **Last Updated:** `2026-08-14 14:44:41`
 - **Parameters:** `27.78 B` | **Published Dtypes:** `F8_E4M3 88.9%, BF16 11.1%`
-- **Architecture:** `Dense`
+- **Architecture:** `Dense` | **Model Class:** `Qwen3_5ForConditionalGeneration`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -157,7 +157,7 @@
 - **Downloads (Last 30 Days):** `127,009` | **Likes:** `786`
 - **Last Updated:** `2026-08-13 16:28:28`
 - **Parameters:** `1,650.50 B` | **Published Dtypes:** `I8 98.4%, F8_E4M3 1.5%, BF16 0.2%, F32 0.0%, I64 0.0%`
-- **Architecture:** `MoE (top-6 of 384 experts)` | **Activated Params:** `~31.70 B`
+- **Architecture:** `MoE (top-6 of 384 experts)` | **Model Class:** `DeepseekV4ForCausalLM` | **Activated Params:** `~31.70 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -172,7 +172,7 @@
 - **Downloads (Last 30 Days):** `5,263,381` | **Likes:** `4,661`
 - **Last Updated:** `2026-08-13 01:46:29`
 - **Parameters:** `33.12 B` | **Published Dtypes:** `BF16 99.9%, F32 0.1%`
-- **Architecture:** `Unknown`
+- **Architecture:** `Unknown` | **Model Class:** `unknown`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -187,7 +187,7 @@
 - **Downloads (Last 30 Days):** `1,660` | **Likes:** `620`
 - **Last Updated:** `2026-08-12 14:22:05`
 - **Parameters:** `8.29 B` | **Published Dtypes:** `BF16 100.0%`
-- **Architecture:** `Dense`
+- **Architecture:** `Dense` | **Model Class:** `Qwen2_5_VLForConditionalGeneration`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -202,7 +202,7 @@
 - **Downloads (Last 30 Days):** `35,309` | **Likes:** `1,184`
 - **Last Updated:** `2026-08-12 10:24:04`
 - **Parameters:** `2,446.18 B` | **Published Dtypes:** `BF16 100.0%`
-- **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `95.00 B`
+- **Architecture:** `MoE (top-10 of 512 experts)` | **Model Class:** `Qwen3_5MoeForCausalLM` | **Activated Params:** `95.00 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -217,7 +217,7 @@
 - **Downloads (Last 30 Days):** `22,999` | **Likes:** `233`
 - **Last Updated:** `2026-08-12 10:23:42`
 - **Parameters:** `2,446.18 B` | **Published Dtypes:** `F8_E4M3 98.0%, BF16 2.0%`
-- **Architecture:** `MoE (top-10 of 512 experts)` | **Activated Params:** `95.00 B`
+- **Architecture:** `MoE (top-10 of 512 experts)` | **Model Class:** `Qwen3_5MoeForCausalLM` | **Activated Params:** `95.00 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -232,7 +232,7 @@
 - **Downloads (Last 30 Days):** `67,395` | **Likes:** `2,119`
 - **Last Updated:** `2026-08-11 07:36:34`
 - **Parameters:** `753.86 B` | **Published Dtypes:** `BF16 100.0%, F32 0.0%`
-- **Architecture:** `MoE (top-8 of 256 experts)` | **Activated Params:** `~41.05 B`
+- **Architecture:** `MoE (top-8 of 256 experts)` | **Model Class:** `GlmMoeDsaForCausalLM` | **Activated Params:** `~41.05 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -247,7 +247,7 @@
 - **Downloads (Last 30 Days):** `417,201` | **Likes:** `389`
 - **Last Updated:** `2026-08-10 09:23:16`
 - **Parameters:** `4.74 B` | **Published Dtypes:** `BF16 100.0%`
-- **Architecture:** `Dense`
+- **Architecture:** `Dense` | **Model Class:** `MageVLForConditionalGeneration`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |
@@ -262,7 +262,7 @@
 - **Downloads (Last 30 Days):** `4,575,518` | **Likes:** `3,825`
 - **Last Updated:** `2026-08-01 03:07:41`
 - **Parameters:** `304.18 B` | **Published Dtypes:** `I8 97.4%, F8_E4M3 2.1%, BF16 0.5%, F32 0.0%, I64 0.0%`
-- **Architecture:** `MoE (top-6 of 256 experts)` | **Activated Params:** `~9.05 B`
+- **Architecture:** `MoE (top-6 of 256 experts)` | **Model Class:** `DeepseekV4ForCausalLM` | **Activated Params:** `~9.05 B`
 
 #### VRAM Requirements & Recommended Hardware:
 | Precision / Quantization | Weight Size | Recommended VRAM | Intel Recommendation | NVIDIA Recommendation |

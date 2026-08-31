@@ -180,10 +180,11 @@ class LLMHardwareAdvisorAgent:
         """Expert fields only appear in the full config.json, not the Hub summary."""
         config = self.fetch_model_config(model_id)
         if config is None:
-            return "Unknown", None
+            return "Unknown", None, None
+        architectures = ", ".join(config.get("architectures") or []) or None
         if not self.has_expert_fields(config):
-            return "Dense", None
-        return "MoE", self.flatten_config(config)
+            return "Dense", None, architectures
+        return "MoE", self.flatten_config(config), architectures
 
     def describe_experts(self, moe_config):
         experts = moe_config.get("n_routed_experts") or moe_config.get("num_experts")
@@ -309,6 +310,7 @@ class LLMHardwareAdvisorAgent:
             if model.get("experts"):
                 arch_text += f" ({model['experts']} experts)"
             report += f"- **Architecture:** `{arch_text}`"
+            report += f" | **Model Class:** `{model.get('architectures') or 'unknown'}`"
             activated = model.get("activated")
             if activated:
                 prefix = "~" if model.get("activated_is_estimate") else ""
@@ -466,8 +468,9 @@ class LLMHardwareAdvisorAgent:
             param_size, dtypes = self.resolve_model_specs(model["id"], model["tags"])
             model["param_size"] = param_size
             model["dtypes"] = dtypes
-            arch_type, moe_config = self.detect_architecture_type(model["id"])
+            arch_type, moe_config, architectures = self.detect_architecture_type(model["id"])
             model["arch_type"] = arch_type
+            model["architectures"] = architectures
             model["experts"] = self.describe_experts(moe_config) if moe_config else None
             model["activated"], model["activated_is_estimate"] = (
                 self.estimate_activated_params(model["id"], moe_config)
