@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+# Report artifacts are rebuilt on every run and deployed straight to Pages.
+daily_hardware_report.md
+docs/
