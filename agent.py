@@ -121,7 +121,10 @@ class LLMHardwareAdvisorAgent:
                 "last_modified": model.last_modified.strftime("%Y-%m-%d %H:%M:%S"),
             })
 
+        # Stable sort: newest first within each org, orgs in TARGET_ORGS order.
         filtered_models.sort(key=lambda item: item["last_modified"], reverse=True)
+        org_order = {org: index for index, org in enumerate(TARGET_ORGS)}
+        filtered_models.sort(key=lambda item: (org_order.get(item["author"], len(org_order)), item["author"]))
         print(f"Matched {len(filtered_models)} model(s).")
         return filtered_models
 
