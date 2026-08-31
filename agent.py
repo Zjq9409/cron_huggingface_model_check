@@ -17,7 +17,7 @@ TARGET_ORGS = [
 MIN_DOWNLOADS = 100
 # Brand-new releases have few downloads yet, so likes act as an alternate signal.
 MIN_LIKES = 50
-DAYS_BACK = 30
+DAYS_BACK = 90
 # Generative LLM pipelines, including multimodal variants such as VLMs.
 TARGET_PIPELINES = {
     "text-generation",
