@@ -11,13 +11,13 @@ from huggingface_hub import HfApi
 # ==================== CONFIGURATION ====================
 # Leave empty to disable org filtering.
 TARGET_ORGS = [
-    "deepseek-ai", "Qwen", "meta-llama", "google",
+    "deepseek-ai", "Qwen", "meta-llama",
     "microsoft", "THUDM","MiniMaxAI", "moonshotai", "zai-org"
 ]
 MIN_DOWNLOADS = 100
 # Brand-new releases have few downloads yet, so likes act as an alternate signal.
 MIN_LIKES = 50
-DAYS_BACK = 90
+DAYS_BACK = 180
 # Generative LLM pipelines, including multimodal variants such as VLMs.
 TARGET_PIPELINES = {
     "text-generation",
@@ -33,6 +33,8 @@ TARGET_PIPELINES = {
 
 FEISHU_WEBHOOK_URL = os.getenv("FEISHU_WEBHOOK")
 SLACK_WEBHOOK_URL = os.getenv("SLACK_WEBHOOK")
+
+HF_ENDPOINT = os.getenv("HF_ENDPOINT", "https://huggingface.co").rstrip("/")
 
 OUTPUT_FILE = os.getenv("REPORT_PATH", "daily_hardware_report.md")
 PAGES_DIR = os.getenv("PAGES_DIR", "docs")
@@ -150,7 +152,7 @@ class LLMHardwareAdvisorAgent:
     def fetch_model_config(self, model_id):
         try:
             response = requests.get(
-                f"https://huggingface.co/{model_id}/resolve/main/config.json",
+                f"{HF_ENDPOINT}/{model_id}/resolve/main/config.json",
                 timeout=15,
             )
         except requests.RequestException as exc:
