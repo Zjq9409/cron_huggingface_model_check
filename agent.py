@@ -293,6 +293,26 @@ class LLMHardwareAdvisorAgent:
         largest_name, largest_capacity = options[-1]
         return f"{math.ceil(vram_gb / largest_capacity)}x {largest_name}"
 
+    def generate_summary_table(self, analyzed_models):
+        table = "## Model Overview\n\n"
+        table += "| Model | Org | Released / Updated | Total Params | Activated Params |\n"
+        table += "| :--- | :--- | :--- | ---: | ---: |\n"
+        for model in analyzed_models:
+            param_size = model.get("param_size")
+            param_text = f"{param_size:,.2f} B" if param_size else "unknown"
+            activated = model.get("activated")
+            if activated:
+                prefix = "~" if model.get("activated_is_estimate") else ""
+                activated_text = f"{prefix}{activated:,.2f} B"
+            else:
+                activated_text = "-" if model.get("arch_type") == "Dense" else "unknown"
+            released = model["last_modified"].split(" ")[0]
+            table += (
+                f"| [{model['id']}](https://huggingface.co/{model['id']}) "
+                f"| {model['author']} | {released} | {param_text} | {activated_text} |\n"
+            )
+        return table + "\n---\n"
+
     def generate_report(self, analyzed_models):
         today_str = datetime.date.today().strftime("%Y-%m-%d")
         report = f"# Daily LLM Hardware Advisor Report ({today_str})\n\n"
@@ -301,6 +321,8 @@ class LLMHardwareAdvisorAgent:
         if not analyzed_models:
             report += f"No new models matching the target criteria were released in the past {DAYS_BACK} days.\n"
             return report
+
+        report += self.generate_summary_table(analyzed_models)
 
         for model in analyzed_models:
             report += f"## [{model['id']}](https://huggingface.co/{model['id']})\n"
